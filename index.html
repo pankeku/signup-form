@@ -1,19 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <div class="card-body">
+          <img src="img/odin-lined.png" />
+          <p class="card-paragraph">ODIN</p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="textbox">
+          <h3>
+            Henlo, my name is Horsey, I would like to offer you some apples and
+            oats and shit. Sign up <em>now</em> to get started. <br /><br />
+            You know you want to.
+          </h3>
+        </div>
+        <form action="" method="post" id="form">
+          <p>Fill in your details</p>
+          <fieldset>
+            <p>
+              <label for="firstname">First name</label>
 
-    
+              <input type="text" name="firstname" id="firstname" />
+            </p>
 
+            <p>
+              <label for="lastname">Last name</label
+              ><input type="text" name="lastname" id="lastname" />
+            </p>
 
+            <p>
+              <label for="email">Email</label
+              ><input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@example.com"
+              />
+            </p>
 
+            <p>
+              <label for="phone">Phone number</label
+              ><input type="tel" name="phone" id="phone" />
+            </p>
 
-<script src="main.js"></script>
-</body>
+            <p>
+              <label for="password">Password</label
+              ><input type="password" name="password" id="password" />
+            </p>
+
+            <p>
+              <label for="confirm-password">Confirm password</label
+              ><input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+              />
+            </p>
+          </fieldset>
+        </form>
+
+        <button form="form" type="submit">Create Account</button>
+
+        <div class="info">Already have an account? <a href="">Log in</a></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>

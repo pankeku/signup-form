@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+html body {
+  font-size: 1.2em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  height: 4em;
+  padding: 10px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+  display: flex;
+}
+
+.card-container {
+  position: relative;
+  height: 100vh;
+  min-width: 40vw;
+  background-image: url(/img/mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 50px;
+}
+
+input {
+    text-indent: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 70px 10px 0px;
+    padding: 10px;
+    font-size: 1em;
+    width: 250px;
+}
+
+input:focus-visible{
+    outline-color: rgb(175, 135, 83);
+}
+
+button {
+    width: 200px;
+    border: 1px ;
+    padding: 20px;
+    font-size: 0.8em;
+    background-color: rgba(255, 167, 2, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+fieldset {
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    background: rgba(256, 256, 256, 1);
+    border-radius: 2%;
+    padding: 30px 0px 30px 0px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-flow: column nowrap;
+    background-image: url(/img/mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .card-container {
+    margin-top: max(2vh);
+    height: 100px;
+    background-image: none;
+  }
+
+  fieldset, h3 {
+    background: rgba(256, 256, 256, 0.9);
+    border-radius: 2%;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input {
+    background-color: rgba(256, 256, 256, 0.8);
+  }
+
+  label {
+    color: black;
+  }
+
+  .content {
+    background: none;
+  }
+}
