@@ -12,65 +12,72 @@
       <div class="card-container">
         <div class="card-body">
           <img src="img/odin-lined.png" />
-          <p class="card-paragraph">ODIN</p>
+          <h3 class="card-paragraph">ODIN</h3>
         </div>
       </div>
       <div class="content">
         <div class="textbox">
           <h3>
-            Henlo, my name is Horsey, I would like to offer you some apples and
-            oats and shit. Sign up <em>now</em> to get started. <br /><br />
-            You know you want to.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
           </h3>
         </div>
         <form action="" method="post" id="form">
           <p>Fill in your details</p>
           <fieldset>
-            <p>
-              <label for="firstname">First name</label>
+            <div class="row">
+                <p>
+                  <label for="firstname">First name</label>
+                  <input type="text" name="firstname" id="firstname" />
+                  <span class="error" aria-live="polite"></span>
+                </p>
+                <p>
+                  <label for="lastname">Last name</label
+                  ><input type="text" name="lastname" id="lastname" />
+                  <span class="error" aria-live="polite"></span>
+                </p>
+            </div>
 
-              <input type="text" name="firstname" id="firstname" />
-            </p>
+            <div class="row">
+                <p>
+                  <label for="text">Email</label
+                  ><input
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                  <span class="error" aria-live="polite"></span>
+                </p>
+                <p>
+                  <label for="phone">Phone number</label
+                  ><input type="tel" name="phone" id="phone""/>
+                  <span class="error" aria-live="polite"></span>
+                </p>
+            </div>
+            <div class="row">
+                <p>
+                  <label for="password">Password</label
+                  ><input type="password" name="password" id="password" />
+                  <span class="error" aria-live="polite"></span>
 
-            <p>
-              <label for="lastname">Last name</label
-              ><input type="text" name="lastname" id="lastname" />
-            </p>
-
-            <p>
-              <label for="email">Email</label
-              ><input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="you@example.com"
-              />
-            </p>
-
-            <p>
-              <label for="phone">Phone number</label
-              ><input type="tel" name="phone" id="phone" />
-            </p>
-
-            <p>
-              <label for="password">Password</label
-              ><input type="password" name="password" id="password" />
-            </p>
-
-            <p>
-              <label for="confirm-password">Confirm password</label
-              ><input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
-              />
-            </p>
+                </p>
+                <p>
+                  <label for="confirm-password">Confirm password</label
+                  ><input
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                  />
+                  <span class="error" aria-live="polite"></span>
+                </p>
+            </div>
           </fieldset>
         </form>
 
         <button form="form" type="submit">Create Account</button>
 
-        <div class="info">Already have an account? <a href="">Log in</a></div>
+        <p class="bottom-info">Already have an account? <a href="">Log in</a></p>
       </div>
     </div>
 

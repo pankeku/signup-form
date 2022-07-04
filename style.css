@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 html body {
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -16,25 +16,30 @@ img {
 }
 
 p {
+  position: relative;
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .container {
   display: flex;
+  height: 100vh;
 }
 
 .card-container {
   position: relative;
-  height: 100vh;
-  min-width: 40vw;
+  height: auto;
+  min-height: 100%;
+  width: min(640px, 40vw);
+  min-width: 240px;
   background-image: url(/img/mountain.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -53,59 +58,102 @@ p {
 
 .content {
   display: flex;
-  flex: 1;
   flex-direction: column;
   padding: 50px;
+  overflow: auto;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    
 }
 
 input {
     text-indent: 3px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 10px 70px 10px 0px;
-    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    padding: 15px;
     font-size: 1em;
-    width: 250px;
 }
 
 input:focus-visible{
     outline-color: rgb(175, 135, 83);
 }
 
+.confirm-password {
+  content: "wasup";
+  color: red;
+}
+
 button {
     width: 200px;
-    border: 1px ;
+    border: none;
     padding: 20px;
     font-size: 0.8em;
     background-color: rgba(255, 167, 2, 0.2);
     border-radius: 10px;
-    margin: 20px;
+    margin: 0px;
+
 }
 
 fieldset {
     font-size: 0.9em;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     border: none;
     background: rgba(256, 256, 256, 1);
-    border-radius: 2%;
-    padding: 30px 0px 30px 0px;
-    justify-content: center;
+    margin: 20px 0px 20px 0px;
+    padding: 0px;
+    gap: 10px;
 }
 
-@media screen and (max-width: 900px) {
+.bottom-info {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.error {
+  padding: 0;
+  font-size: 80%;
+  color: red;
+  white-space: pre-line;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
   .container {
-    flex-flow: column nowrap;
-    background-image: url(/img/mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0px;
+  }
+
+  .card-body {
+    position: static;
+  }
+
+  .card-paragraph {
+    background: none;
+    margin: 0px;
   }
 
   .card-container {
-    margin-top: max(2vh);
-    height: 100px;
-    background-image: none;
+    min-height: auto;
+    width: auto;
+    min-width: auto;
   }
 
   fieldset, h3 {
@@ -126,5 +174,8 @@ fieldset {
 
   .content {
     background: none;
+    overflow:visible;
+    padding: 5vw;
+    align-items: center;
   }
 }
