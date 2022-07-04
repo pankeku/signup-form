@@ -35,7 +35,7 @@ p {
   min-height: 100%;
   width: min(640px, 40vw);
   min-width: 240px;
-  background-image: url(/img/mountain.jpg);
+  background-image: url(img/mountain.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
